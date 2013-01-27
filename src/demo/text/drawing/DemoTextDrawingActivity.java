@@ -7,7 +7,6 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Rect;
 import android.os.Bundle;
 import android.text.StaticLayout;
 import android.text.TextPaint;
@@ -35,7 +34,7 @@ public class DemoTextDrawingActivity extends Activity {
         final String content;
         
         try {
-        	InputStream is = getAssets().open("1-1.txt");
+        	InputStream is = getAssets().open("1-1-1.txt");
             
             // We guarantee that the available method returns the total
             // size of the asset...  of course, this does mean that a single
@@ -66,7 +65,7 @@ public class DemoTextDrawingActivity extends Activity {
 				StaticLayout staticLayout = new StaticLayout(
 						content, 0, content.length(),
 						TEXT_PAINT, getWidth(),android.text.Layout.Alignment.ALIGN_NORMAL , 
-						1.0f, 1.0f, false);
+						1.0f, 5.0f, true);
 				//staticLayout.draw(canvas);
 				
 				
